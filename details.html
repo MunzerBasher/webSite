@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>details</title>
+</head>
+
+<body>
+    <h1 id="title"></h1>
+    <p id="description"></p>
+
+    <script>
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const project = localStorage.getItem("projectData");
+
+        console.log(project)
+        const obj = JSON.parse(project);
+        console.log(obj)
+        document.getElementById("title").innerText = obj.title;
+        document.getElementById("description").textContent = obj.description;
+        localStorage.removeItem("projectData");
+
+
+    </script>
+
+</body>
+
+</html>
